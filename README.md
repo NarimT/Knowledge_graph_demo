@@ -13,7 +13,7 @@ Designed for clarity, reproducibility, and to demonstrate LLM-assisted workflows
 * Saved LLM outputs: `llm_session/raw_responses.json`
 * Outputs: `notebooks_output/`
 * Core code: `src/`
-* Tests: `tests/test_pipeline.py`
+* Tests: `test_pipeline.py`
 
 ---
 
@@ -48,7 +48,7 @@ export OPENAI_API_KEY="sk-..."   # macOS / Linux
 3. Run the demo notebook:
 
 ```bash
-jupyter notebook notebooks/03_pipeline_demo.ipynb
+jupyter notebook 03_pipeline_demo.ipynb
 ```
 
 ---
@@ -89,9 +89,9 @@ python -m spacy download en_core_web_sm
 ├─ src/                      # extractors, normalize, llm_client, kg_builder, eval
 ├─ notebooks_output/         # exported graphs, jsons, evaluation results
 ├─ llm_session/              # saved prompt inputs + raw LLM outputs (traceability)
-├─ tests/                    # pytest unit tests
+├─ test_pipeline.py                    # pytest unit tests
 ├─ requirements.txt
-├─ Dockerfile
+├─ venv
 └─ README.md
 ```
 
