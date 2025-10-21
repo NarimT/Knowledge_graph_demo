@@ -1,0 +1,175 @@
+{
+  "schema": {
+    "namespaces": {
+      "ex": "http://example.org/kg#",
+      "prov": "http://www.w3.org/ns/prov#",
+      "schema": "http://schema.org/",
+      "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "entityTypes": [
+      {
+        "id": "ex:Person",
+        "label": "Person",
+        "description": "A human agent; core node for which personality is asserted. Properties: schema:name, ex:birthDate (optional), ex:alias."
+      },
+      {
+        "id": "ex:Organization",
+        "label": "Organization",
+        "description": "An organization or employer. Properties: schema:name, schema:location."
+      },
+      {
+        "id": "ex:Occupation",
+        "label": "Occupation",
+        "description": "Occupation or role node (SoftwareEngineer, Manager...)."
+      },
+      {
+        "id": "ex:Document",
+        "label": "Document",
+        "description": "Source artefact (file, sentence). Holds minimal provenance like id, title, excerpt."
+      },
+      {
+        "id": "ex:PersonalityTrait",
+        "label": "PersonalityTrait",
+        "description": "Trait concept (e.g., Agreeableness, Extraversion)."
+      },
+      {
+        "id": "ex:TraitAssertion",
+        "label": "TraitAssertion",
+        "description": "A reified assertion linking a Person to a PersonalityTrait plus score, confidence, and provenance metadata."
+      },
+      {
+        "id": "ex:ExtractionRun",
+        "label": "ExtractionRun",
+        "description": "Execution record describing the pipeline run that produced assertions (tool versions, parameters)."
+      }
+    ],
+    "relationTypes": [
+      {
+        "id": "ex:hasOccupation",
+        "domain": "ex:Person",
+        "range": "ex:Occupation",
+        "description": "Person -> Occupation"
+      },
+      {
+        "id": "ex:worksAt",
+        "domain": "ex:Person",
+        "range": "ex:Organization",
+        "description": "Employment / affiliation relation."
+      },
+      {
+        "id": "ex:hasTrait",
+        "domain": "ex:Person",
+        "range": "ex:PersonalityTrait",
+        "description": "Coarse relation (presence). Prefer using TraitAssertion for scores."
+      },
+      {
+        "id": "ex:assertedBy",
+        "domain": "ex:TraitAssertion",
+        "range": "ex:ExtractionRun",
+        "description": "Points to the pipeline run that created the assertion."
+      },
+      {
+        "id": "prov:wasDerivedFrom",
+        "domain": "ex:TraitAssertion",
+        "range": "ex:Document",
+        "description": "Provenance link to source document."
+      }
+    ],
+    "traitRepresentation": {
+      "preferredPattern": "TraitAssertion (reified node)",
+      "rationale": "A reified node stores score, confidence, measurement instrument, timestamp and provenance in a single place making numeric evaluation straightforward while keeping triples queryable.",
+      "fields": [
+        { "name": "ex:subject", "type": "ex:Person", "desc": "who the trait is about" },
+        { "name": "ex:trait", "type": "ex:PersonalityTrait", "desc": "trait concept" },
+        { "name": "ex:score", "type": "xsd:float", "desc": "numeric score (normalized, e.g., 0..1)" },
+        { "name": "ex:confidence", "type": "xsd:float", "desc": "system confidence (0..1)" },
+        { "name": "ex:measuredBy", "type": "xsd:string", "desc": "instrument or method (e.g., BFI-44, lexicon-v1, model-v2)" },
+        { "name": "ex:measuredAt", "type": "xsd:date", "desc": "date of measurement or extraction" },
+        { "name": "prov:wasDerivedFrom", "type": "ex:Document", "desc": "source document reference" },
+        { "name": "ex:extractedSpan", "type": "rdf:PlainLiteral", "desc": "text span or offsets used to support the assertion" }
+      ]
+    },
+    "provenanceModel": {
+      "principles": [
+        "Every TraitAssertion must include: prov:wasDerivedFrom (Document), ex:measuredBy (method id), ex:measuredAt (date) and ex:assertedBy (ExtractionRun).",
+        "Document nodes should include an excerpt and an id (no sensitive full-text by default).",
+        "ExtractionRun holds tool name/version, parameters and timestamp to make results reproducible."
+      ],
+      "exampleProperties": [
+        { "name": "ex:extractionMethod", "type": "xsd:string" },
+        { "name": "ex:scriptVersion", "type": "xsd:string" },
+        { "name": "prov:wasGeneratedBy", "type": "ex:ExtractionRun" }
+      ],
+      "riskNote": "Keep excerpt lengths small & avoid storing private data in Document nodes. Provenance metadata increases verbosity but is crucial for auditability."
+    }
+  },
+  "example": {
+    "sentence": "Alice, a software engineer at Acme Corp, tends to be friendly.",
+    "jsonld": {
+      "@context": {
+        "ex": "http://example.org/kg#",
+        "prov": "http://www.w3.org/ns/prov#",
+        "schema": "http://schema.org/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      },
+      "@graph": [
+        {
+          "@id": "ex:doc1",
+          "@type": "ex:Document",
+          "schema:name": "sample-sentence-1",
+          "ex:excerpt": "Alice, a software engineer at Acme Corp, tends to be friendly.",
+          "ex:language": "en"
+        },
+        {
+          "@id": "ex:Alice",
+          "@type": "ex:Person",
+          "schema:name": "Alice",
+          "ex:hasOccupation": { "@id": "ex:SoftwareEngineer" },
+          "ex:worksAt": { "@id": "ex:AcmeCorp" },
+          "prov:wasDerivedFrom": { "@id": "ex:doc1" }
+        },
+        {
+          "@id": "ex:SoftwareEngineer",
+          "@type": "ex:Occupation",
+          "rdfs:label": "Software Engineer"
+        },
+        {
+          "@id": "ex:AcmeCorp",
+          "@type": "ex:Organization",
+          "schema:name": "Acme Corp"
+        },
+        {
+          "@id": "ex:Agreeableness",
+          "@type": "ex:PersonalityTrait",
+          "rdfs:label": "Agreeableness",
+          "ex:definition": "Tendency to be compassionate and cooperative"
+        },
+        {
+          "@id": "ex:extractionRun1",
+          "@type": "ex:ExtractionRun",
+          "ex:extractionMethod": "lexicon-v1",
+          "ex:scriptVersion": "v0.1",
+          "prov:generatedAtTime": "2025-10-19"
+        },
+        {
+          "@id": "ex:traitAssertion1",
+          "@type": "ex:TraitAssertion",
+          "ex:subject": { "@id": "ex:Alice" },
+          "ex:trait": { "@id": "ex:Agreeableness" },
+          "ex:score": { "@value": "0.72", "@type": "xsd:float" },
+          "ex:confidence": { "@value": "0.85", "@type": "xsd:float" },
+          "ex:measuredBy": "lexicon-v1",
+          "ex:measuredAt": { "@value": "2025-10-19", "@type": "xsd:date" },
+          "prov:wasDerivedFrom": { "@id": "ex:doc1" },
+          "ex:extractedSpan": {
+            "start": 0,
+            "end": 56,
+            "text": "Alice, a software engineer at Acme Corp, tends to be friendly."
+          },
+          "ex:assertedBy": { "@id": "ex:extractionRun1" }
+        }
+      ]
+    }
+  }
+}

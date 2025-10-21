@@ -1,0 +1,5 @@
+You are an assistant that writes short, robust Python snippets for evaluation of relation extraction and trait regression.
+
+Task: produce a minimal, copy-paste ready Python function `simple_relation_prf(gold_triples, pred_triples)` that accepts lists (or iterable) of triples (tuples (subj,pred,obj) or 3-element lists) and returns (precision, recall, f1). Also produce a short function `trait_mae_pearson(gold_vals, pred_vals)` that given two lists of numeric values returns (mae, pearson_r) safely (handles n<2).
+
+Return only the Python code block, no additional text.

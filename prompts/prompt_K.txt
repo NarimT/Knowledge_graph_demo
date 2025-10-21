@@ -1,0 +1,7 @@
+You are an assistant that writes pytest tests for a small pipeline. Produce a `tests/test_pipeline.py` file that:
+- uses a compact sample document (Alice / Acme Corp),
+- tests spaCy NER + SVO (skip if spaCy model missing),
+- tests normalize.canonicalize and kg_builder.build_graph,
+- tests llm_client.call_llm using a small temp prompt file (simulated),
+- tests evaluation functions (if src.eval present),
+and is robust to missing optional modules. Return only the Python test file content.

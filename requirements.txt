@@ -1,0 +1,28 @@
+# Core NLP
+spacy==3.6.0
+spacy-transformers==1.3.5        # optional but good if you use transformer-based NER
+
+# Graph and data handling
+networkx==3.2.1
+numpy==1.26.4
+pandas==2.2.2
+
+# JSON schema validation and utils
+jsonschema==4.21.1
+
+# Visualization (optional but useful for graph/personality plots)
+matplotlib==3.8.4
+seaborn==0.13.2                  # for nicer plots
+pyvis==0.3.2                     # for interactive graph visualization (optional)
+
+# Testing and reproducibility
+pytest==8.2.0
+pytest-cov==5.0.0                # for test coverage reports
+
+# LLM / API support (for personality inference or prompt calls)
+openai==1.13.3                   # if using GPT-style API locally or via key
+tqdm==4.66.4                     # for progress bars
+requests==2.32.2                 # for API requests
+
+# Environment reproducibility
+python-dotenv==1.0.1    

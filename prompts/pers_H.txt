@@ -1,0 +1,56 @@
+You are a concise annotator that estimates a person's Big-5 personality traits from a short text.
+
+Input:
+{input_text}
+
+INSTRUCTIONS:
+- If the input mentions one or more people, produce a personality estimate for each specified person. If a single person is targeted, produce for that person only.
+  (If your caller provided a separate "person" field in the input payload, focus on that person. If not, process all persons mentioned.)
+- For each person output:
+  - "person": exact name surface text as it appears in the input_text,
+  - "big5": object with keys openness, conscientiousness, extraversion, agreeableness, neuroticism and numeric values between 0.00 and 1.00 (two decimals),
+  - "explanation": one short sentence (≤ 30 words) explaining the main textual evidence for the scores,
+  - "evidence": list of exact substring(s) from the input_text that support the assessment (must be verbatim substrings).
+- Prefer conservative, evidence-based scores. Do NOT invent behavior beyond the text.
+- Return JSON **only**. No extra commentary.
+
+OUTPUT FORMAT (JSON):
+{
+  "extracted": [
+    {
+      "person": "<PERSON surface text>",
+      "big5": {
+        "openness": 0.00,
+        "conscientiousness": 0.00,
+        "extraversion": 0.00,
+        "agreeableness": 0.00,
+        "neuroticism": 0.00
+      },
+      "explanation": "<one-sentence justification citing text evidence>",
+      "evidence": ["<exact substring 1 from the input_text>", "<exact substring 2 (optional)>"]
+    },
+    ...
+  ]
+}
+
+EXAMPLE:
+For input_text "Eva left Meridian Bank last month to join a fintech startup called FlowPay. Colleagues say she is meticulous and often rechecks numbers before submission."
+Return something like:
+{
+  "extracted": [
+    {
+      "person": "Eva",
+      "big5": {
+        "openness": 0.72,
+        "conscientiousness": 0.95,
+        "extraversion": 0.42,
+        "agreeableness": 0.62,
+        "neuroticism": 0.35
+      },
+      "explanation": "High conscientiousness because colleagues call her 'meticulous' and she 'rechecks numbers'.",
+      "evidence": ["Colleagues say she is meticulous", "often rechecks numbers before submission"]
+    }
+  ]
+}
+
+Now produce the JSON for the actual {input_text}.

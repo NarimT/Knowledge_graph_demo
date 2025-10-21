@@ -1,0 +1,717 @@
+{
+  "@context": {
+    "ex": "http://example.org/kg#"
+  },
+  "@graph": {
+    "nodes": [
+      {
+        "@id": "D1_E1",
+        "@type": "Person",
+        "label": "Alice"
+      },
+      {
+        "@id": "D1_E2",
+        "@type": "Organization",
+        "label": "Acme Corp"
+      },
+      {
+        "@id": "D2_E1",
+        "@type": "Person",
+        "label": "Dr. Ben Rivera"
+      },
+      {
+        "@id": "D2_E2",
+        "@type": "Organization",
+        "label": "Helix Labs"
+      },
+      {
+        "@id": "D3_E1",
+        "@type": "Person",
+        "label": "Carla"
+      },
+      {
+        "@id": "D3_E2",
+        "@type": "Organization",
+        "label": "Nimbus Telecom"
+      },
+      {
+        "@id": "D3_E3",
+        "@type": "Organization",
+        "label": "local shelter"
+      },
+      {
+        "@id": "D4_E1",
+        "@type": "Person",
+        "label": "David"
+      },
+      {
+        "@id": "D4_E2",
+        "@type": "Organization",
+        "label": "Solstice Energy"
+      },
+      {
+        "@id": "D5_E1",
+        "@type": "Person",
+        "label": "Eva"
+      },
+      {
+        "@id": "D5_E2",
+        "@type": "Organization",
+        "label": "Meridian Bank"
+      },
+      {
+        "@id": "D5_E3",
+        "@type": "Organization",
+        "label": "FlowPay"
+      },
+      {
+        "@id": "D6_E1",
+        "@type": "Person",
+        "label": "Franklin"
+      },
+      {
+        "@id": "D6_E2",
+        "@type": "Organization",
+        "label": "Atlas Robotics"
+      },
+      {
+        "@id": "D6_E3",
+        "@type": "Organization",
+        "label": "Vector Dynamics"
+      },
+      {
+        "@id": "D7_E1",
+        "@type": "Person",
+        "label": "Grace"
+      },
+      {
+        "@id": "D7_E2",
+        "@type": "Organization",
+        "label": "Loom Studios"
+      },
+      {
+        "@id": "D8_E1",
+        "@type": "Person",
+        "label": "Hector"
+      },
+      {
+        "@id": "D8_E2",
+        "@type": "Organization",
+        "label": "NovaHealth"
+      },
+      {
+        "@id": "D9_E1",
+        "@type": "Person",
+        "label": "Iris"
+      },
+      {
+        "@id": "D9_E2",
+        "@type": "Organization",
+        "label": "HarborBank"
+      },
+      {
+        "@id": "D9_E3",
+        "@type": "Organization",
+        "label": "community"
+      },
+      {
+        "@id": "D10_E1",
+        "@type": "Person",
+        "label": "Jack"
+      },
+      {
+        "@id": "D10_E2",
+        "@type": "Organization",
+        "label": "BluePeak Solutions"
+      },
+      {
+        "@id": "D1_GEN_corp",
+        "@type": "Unknown",
+        "label": "D1_GEN_corp"
+      },
+      {
+        "@id": "D1_GEN_she",
+        "@type": "Unknown",
+        "label": "D1_GEN_she"
+      },
+      {
+        "@id": "D1_GEN_meetings",
+        "@type": "Unknown",
+        "label": "D1_GEN_meetings"
+      },
+      {
+        "@id": "D1_GEN_deadlines",
+        "@type": "Unknown",
+        "label": "D1_GEN_deadlines"
+      },
+      {
+        "@id": "D1_GEN_team",
+        "@type": "Unknown",
+        "label": "D1_GEN_team"
+      },
+      {
+        "@id": "D2_GEN_rivera",
+        "@type": "Unknown",
+        "label": "D2_GEN_rivera"
+      },
+      {
+        "@id": "D2_GEN_labs",
+        "@type": "Unknown",
+        "label": "D2_GEN_labs"
+      },
+      {
+        "@id": "D2_GEN_research",
+        "@type": "Unknown",
+        "label": "D2_GEN_research"
+      },
+      {
+        "@id": "D2_GEN_he",
+        "@type": "Unknown",
+        "label": "D2_GEN_he"
+      },
+      {
+        "@id": "D2_GEN_conferences",
+        "@type": "Unknown",
+        "label": "D2_GEN_conferences"
+      },
+      {
+        "@id": "D2_GEN_colleagues",
+        "@type": "Unknown",
+        "label": "D2_GEN_colleagues"
+      },
+      {
+        "@id": "D2_GEN_experiments",
+        "@type": "Unknown",
+        "label": "D2_GEN_experiments"
+      },
+      {
+        "@id": "D2_GEN_dr",
+        "@type": "Unknown",
+        "label": "D2_GEN_dr"
+      },
+      {
+        "@id": "D2_GEN_acme_corp",
+        "@type": "Unknown",
+        "label": "D2_GEN_acme_corp"
+      },
+      {
+        "@id": "D3_GEN_she",
+        "@type": "Unknown",
+        "label": "D3_GEN_she"
+      },
+      {
+        "@id": "D3_GEN_complaints",
+        "@type": "Unknown",
+        "label": "D3_GEN_complaints"
+      },
+      {
+        "@id": "D3_GEN_telecom",
+        "@type": "Unknown",
+        "label": "D3_GEN_telecom"
+      },
+      {
+        "@id": "D3_GEN_acme_corp",
+        "@type": "Unknown",
+        "label": "D3_GEN_acme_corp"
+      },
+      {
+        "@id": "D4_GEN_investors",
+        "@type": "Unknown",
+        "label": "D4_GEN_investors"
+      },
+      {
+        "@id": "D4_GEN_deals",
+        "@type": "Unknown",
+        "label": "D4_GEN_deals"
+      },
+      {
+        "@id": "D4_GEN_he",
+        "@type": "Unknown",
+        "label": "D4_GEN_he"
+      },
+      {
+        "@id": "D4_GEN_emotion",
+        "@type": "Unknown",
+        "label": "D4_GEN_emotion"
+      },
+      {
+        "@id": "D4_GEN_targets",
+        "@type": "Unknown",
+        "label": "D4_GEN_targets"
+      },
+      {
+        "@id": "D4_GEN_acme_corp",
+        "@type": "Unknown",
+        "label": "D4_GEN_acme_corp"
+      },
+      {
+        "@id": "D5_GEN_bank",
+        "@type": "Unknown",
+        "label": "D5_GEN_bank"
+      },
+      {
+        "@id": "D5_GEN_startup",
+        "@type": "Unknown",
+        "label": "D5_GEN_startup"
+      },
+      {
+        "@id": "D5_GEN_she",
+        "@type": "Unknown",
+        "label": "D5_GEN_she"
+      },
+      {
+        "@id": "D5_GEN_numbers",
+        "@type": "Unknown",
+        "label": "D5_GEN_numbers"
+      },
+      {
+        "@id": "D5_GEN_colleagues",
+        "@type": "Unknown",
+        "label": "D5_GEN_colleagues"
+      },
+      {
+        "@id": "D5_GEN_acme_corp",
+        "@type": "Unknown",
+        "label": "D5_GEN_acme_corp"
+      },
+      {
+        "@id": "D6_GEN_company",
+        "@type": "Unknown",
+        "label": "D6_GEN_company"
+      },
+      {
+        "@id": "D6_GEN_partnership",
+        "@type": "Unknown",
+        "label": "D6_GEN_partnership"
+      },
+      {
+        "@id": "D6_GEN_acme_corp",
+        "@type": "Unknown",
+        "label": "D6_GEN_acme_corp"
+      },
+      {
+        "@id": "D6_GEN_the",
+        "@type": "Unknown",
+        "label": "D6_GEN_the"
+      },
+      {
+        "@id": "D7_GEN_head",
+        "@type": "Unknown",
+        "label": "D7_GEN_head"
+      },
+      {
+        "@id": "D7_GEN_she",
+        "@type": "Unknown",
+        "label": "D7_GEN_she"
+      },
+      {
+        "@id": "D7_GEN_risks",
+        "@type": "Unknown",
+        "label": "D7_GEN_risks"
+      },
+      {
+        "@id": "D7_GEN_studios",
+        "@type": "Unknown",
+        "label": "D7_GEN_studios"
+      },
+      {
+        "@id": "D7_GEN_acme_corp",
+        "@type": "Unknown",
+        "label": "D7_GEN_acme_corp"
+      },
+      {
+        "@id": "D8_GEN_startup",
+        "@type": "Unknown",
+        "label": "D8_GEN_startup"
+      },
+      {
+        "@id": "D8_GEN_he",
+        "@type": "Unknown",
+        "label": "D8_GEN_he"
+      },
+      {
+        "@id": "D8_GEN_teams",
+        "@type": "Unknown",
+        "label": "D8_GEN_teams"
+      },
+      {
+        "@id": "D8_GEN_checklists",
+        "@type": "Unknown",
+        "label": "D8_GEN_checklists"
+      },
+      {
+        "@id": "D8_GEN_acme_corp",
+        "@type": "Unknown",
+        "label": "D8_GEN_acme_corp"
+      },
+      {
+        "@id": "D9_GEN_drive",
+        "@type": "Unknown",
+        "label": "D9_GEN_drive"
+      },
+      {
+        "@id": "D9_GEN_volunteers",
+        "@type": "Unknown",
+        "label": "D9_GEN_volunteers"
+      },
+      {
+        "@id": "D9_GEN_she",
+        "@type": "Unknown",
+        "label": "D9_GEN_she"
+      },
+      {
+        "@id": "D9_GEN_everyone",
+        "@type": "Unknown",
+        "label": "D9_GEN_everyone"
+      },
+      {
+        "@id": "D9_GEN_conflicts",
+        "@type": "Unknown",
+        "label": "D9_GEN_conflicts"
+      },
+      {
+        "@id": "D9_GEN_acme_corp",
+        "@type": "Unknown",
+        "label": "D9_GEN_acme_corp"
+      },
+      {
+        "@id": "D10_GEN_contract",
+        "@type": "Unknown",
+        "label": "D10_GEN_contract"
+      },
+      {
+        "@id": "D10_GEN_pipeline",
+        "@type": "Unknown",
+        "label": "D10_GEN_pipeline"
+      },
+      {
+        "@id": "D10_GEN_he",
+        "@type": "Unknown",
+        "label": "D10_GEN_he"
+      },
+      {
+        "@id": "D10_GEN_meetings",
+        "@type": "Unknown",
+        "label": "D10_GEN_meetings"
+      },
+      {
+        "@id": "D10_GEN_solutions",
+        "@type": "Unknown",
+        "label": "D10_GEN_solutions"
+      },
+      {
+        "@id": "D10_GEN_acme_corp",
+        "@type": "Unknown",
+        "label": "D10_GEN_acme_corp"
+      }
+    ],
+    "edges": [
+      {
+        "@type": "join",
+        "subj": "D1_E1",
+        "obj": "D1_GEN_corp",
+        "pred": "join"
+      },
+      {
+        "@type": "worksAt",
+        "subj": "D1_E1",
+        "obj": "D1_GEN_corp",
+        "pred": "worksAt"
+      },
+      {
+        "@type": "worksAt",
+        "subj": "D3_E1",
+        "obj": "D3_GEN_telecom",
+        "pred": "worksAt"
+      },
+      {
+        "@type": "meet",
+        "subj": "D4_E1",
+        "obj": "D4_GEN_investors",
+        "pred": "meet"
+      },
+      {
+        "@type": "negotiate",
+        "subj": "D4_E1",
+        "obj": "D4_GEN_deals",
+        "pred": "negotiate"
+      },
+      {
+        "@type": "worksAt",
+        "subj": "D4_E1",
+        "obj": "D4_GEN_acme_corp",
+        "pred": "worksAt"
+      },
+      {
+        "@type": "leave",
+        "subj": "D5_E1",
+        "obj": "D5_GEN_bank",
+        "pred": "leave"
+      },
+      {
+        "@type": "worksAt",
+        "subj": "D5_E1",
+        "obj": "D5_GEN_bank",
+        "pred": "worksAt"
+      },
+      {
+        "@type": "join",
+        "subj": "D5_E1",
+        "obj": "D5_GEN_startup",
+        "pred": "join"
+      },
+      {
+        "@type": "worksAt",
+        "subj": "D6_E1",
+        "obj": "D6_GEN_acme_corp",
+        "pred": "worksAt"
+      },
+      {
+        "@type": "promote",
+        "subj": "D7_E1",
+        "obj": "D7_GEN_head",
+        "pred": "promote"
+      },
+      {
+        "@type": "worksAt",
+        "subj": "D7_E1",
+        "obj": "D7_GEN_studios",
+        "pred": "worksAt"
+      },
+      {
+        "@type": "advise",
+        "subj": "D8_E1",
+        "obj": "D8_GEN_startup",
+        "pred": "advise"
+      },
+      {
+        "@type": "worksAt",
+        "subj": "D8_E1",
+        "obj": "D8_GEN_acme_corp",
+        "pred": "worksAt"
+      },
+      {
+        "@type": "organize",
+        "subj": "D9_E1",
+        "obj": "D9_GEN_drive",
+        "pred": "organize"
+      },
+      {
+        "@type": "recruit",
+        "subj": "D9_E1",
+        "obj": "D9_GEN_volunteers",
+        "pred": "recruit"
+      },
+      {
+        "@type": "worksAt",
+        "subj": "D9_E1",
+        "obj": "D9_E2",
+        "pred": "worksAt"
+      },
+      {
+        "@type": "sign",
+        "subj": "D10_E1",
+        "obj": "D10_GEN_contract",
+        "pred": "sign"
+      },
+      {
+        "@type": "overhaul",
+        "subj": "D10_E1",
+        "obj": "D10_GEN_pipeline",
+        "pred": "overhaul"
+      },
+      {
+        "@type": "worksAt",
+        "subj": "D10_E1",
+        "obj": "D10_GEN_solutions",
+        "pred": "worksAt"
+      },
+      {
+        "@type": "organize",
+        "subj": "D1_GEN_she",
+        "obj": "D1_GEN_meetings",
+        "pred": "organize"
+      },
+      {
+        "@type": "meet",
+        "subj": "D1_GEN_she",
+        "obj": "D1_GEN_deadlines",
+        "pred": "meet"
+      },
+      {
+        "@type": "keep",
+        "subj": "D1_GEN_she",
+        "obj": "D1_GEN_team",
+        "pred": "keep"
+      },
+      {
+        "@type": "worksAt",
+        "subj": "D1_GEN_she",
+        "obj": "D1_E2",
+        "pred": "worksAt"
+      },
+      {
+        "@type": "found",
+        "subj": "D2_GEN_rivera",
+        "obj": "D2_GEN_labs",
+        "pred": "found"
+      },
+      {
+        "@type": "leave",
+        "subj": "D2_GEN_rivera",
+        "obj": "D2_GEN_research",
+        "pred": "leave"
+      },
+      {
+        "@type": "speak",
+        "subj": "D2_GEN_he",
+        "obj": "D2_GEN_conferences",
+        "pred": "speak"
+      },
+      {
+        "@type": "push",
+        "subj": "D2_GEN_he",
+        "obj": "D2_GEN_colleagues",
+        "pred": "push"
+      },
+      {
+        "@type": "try",
+        "subj": "D2_GEN_he",
+        "obj": "D2_GEN_experiments",
+        "pred": "try"
+      },
+      {
+        "@type": "worksAt",
+        "subj": "D2_GEN_he",
+        "obj": "D2_GEN_acme_corp",
+        "pred": "worksAt"
+      },
+      {
+        "@type": "worksAt",
+        "subj": "D2_GEN_dr",
+        "obj": "D2_GEN_labs",
+        "pred": "worksAt"
+      },
+      {
+        "@type": "resolve",
+        "subj": "D3_GEN_she",
+        "obj": "D3_GEN_complaints",
+        "pred": "resolve"
+      },
+      {
+        "@type": "worksAt",
+        "subj": "D3_GEN_she",
+        "obj": "D3_GEN_acme_corp",
+        "pred": "worksAt"
+      },
+      {
+        "@type": "show",
+        "subj": "D4_GEN_he",
+        "obj": "D4_GEN_emotion",
+        "pred": "show"
+      },
+      {
+        "@type": "focus",
+        "subj": "D4_GEN_he",
+        "obj": "D4_GEN_targets",
+        "pred": "focus"
+      },
+      {
+        "@type": "worksAt",
+        "subj": "D4_GEN_he",
+        "obj": "D4_GEN_acme_corp",
+        "pred": "worksAt"
+      },
+      {
+        "@type": "recheck",
+        "subj": "D5_GEN_she",
+        "obj": "D5_GEN_numbers",
+        "pred": "recheck"
+      },
+      {
+        "@type": "worksAt",
+        "subj": "D5_GEN_colleagues",
+        "obj": "D5_GEN_acme_corp",
+        "pred": "worksAt"
+      },
+      {
+        "@type": "announce",
+        "subj": "D6_GEN_company",
+        "obj": "D6_GEN_partnership",
+        "pred": "announce"
+      },
+      {
+        "@type": "worksAt",
+        "subj": "D6_GEN_the",
+        "obj": "D6_GEN_acme_corp",
+        "pred": "worksAt"
+      },
+      {
+        "@type": "take",
+        "subj": "D7_GEN_she",
+        "obj": "D7_GEN_risks",
+        "pred": "take"
+      },
+      {
+        "@type": "worksAt",
+        "subj": "D7_GEN_she",
+        "obj": "D7_GEN_acme_corp",
+        "pred": "worksAt"
+      },
+      {
+        "@type": "warn",
+        "subj": "D8_GEN_he",
+        "obj": "D8_GEN_teams",
+        "pred": "warn"
+      },
+      {
+        "@type": "write",
+        "subj": "D8_GEN_he",
+        "obj": "D8_GEN_checklists",
+        "pred": "write"
+      },
+      {
+        "@type": "worksAt",
+        "subj": "D8_GEN_he",
+        "obj": "D8_GEN_acme_corp",
+        "pred": "worksAt"
+      },
+      {
+        "@type": "greet",
+        "subj": "D9_GEN_she",
+        "obj": "D9_GEN_everyone",
+        "pred": "greet"
+      },
+      {
+        "@type": "resolve",
+        "subj": "D9_GEN_she",
+        "obj": "D9_GEN_conflicts",
+        "pred": "resolve"
+      },
+      {
+        "@type": "worksAt",
+        "subj": "D9_GEN_she",
+        "obj": "D9_GEN_acme_corp",
+        "pred": "worksAt"
+      },
+      {
+        "@type": "work",
+        "subj": "D10_GEN_he",
+        "obj": "D10_GEN_meetings",
+        "pred": "work"
+      },
+      {
+        "@type": "decline",
+        "subj": "D10_GEN_he",
+        "obj": "D10_GEN_meetings",
+        "pred": "decline"
+      },
+      {
+        "@type": "worksAt",
+        "subj": "D10_GEN_he",
+        "obj": "D10_GEN_acme_corp",
+        "pred": "worksAt"
+      }
+    ]
+  }
+}

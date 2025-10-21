@@ -1,0 +1,246 @@
+[
+{
+"doc_id": "D1",
+"text": "Alice joined Acme Corp as a project manager last month. She organized weekly meetings and consistently met deadlines to keep the team on schedule.",
+"gold_entities": [
+{ "id": "D1_E1", "text": "Alice", "type": "Person" },
+{ "id": "D1_E2", "text": "Acme Corp", "type": "Organization" }
+],
+"gold_relations": [
+{ "subj_id": "D1_E1", "pred": "worksAt", "obj_id": "D1_E2" },
+{ "subj_id": "D1_E1", "pred": "role", "obj_id": "D1_E2" }
+],
+"personality_labels": {
+"D1_E1": {
+"big5": {
+"openness": 0.60,
+"conscientiousness": 0.92,
+"extraversion": 0.70,
+"agreeableness": 0.75,
+"neuroticism": 0.20
+},
+"explanation": "High conscientiousness because she 'consistently met deadlines' and organized meetings; moderately extroverted due to organizing meetings; low neuroticism because the description suggests steady performance."
+}
+}
+},
+{
+"doc_id": "D2",
+"text": "Dr. Ben Rivera founded Helix Labs after leaving university research. He often speaks at conferences and pushes colleagues to try bold experiments.",
+"gold_entities": [
+{ "id": "D2_E1", "text": "Dr. Ben Rivera", "type": "Person" },
+{ "id": "D2_E2", "text": "Helix Labs", "type": "Organization" }
+],
+"gold_relations": [
+{ "subj_id": "D2_E1", "pred": "founded", "obj_id": "D2_E2" },
+{ "subj_id": "D2_E1", "pred": "affiliatedWith", "obj_id": "D2_E2" }
+],
+"personality_labels": {
+"D2_E1": {
+"big5": {
+"openness": 0.92,
+"conscientiousness": 0.65,
+"extraversion": 0.82,
+"agreeableness": 0.45,
+"neuroticism": 0.30
+},
+"explanation": "Very high openness (founder of a lab, pushes bold experiments); high extraversion (speaks at conferences); moderate conscientiousness; lower agreeableness indicated by pushing colleagues to take risks."
+}
+}
+},
+{
+"doc_id": "D3",
+"text": "Carla is a customer support lead at Nimbus Telecom. She patiently resolves complaints and volunteers on weekends at the local shelter.",
+"gold_entities": [
+{ "id": "D3_E1", "text": "Carla", "type": "Person" },
+{ "id": "D3_E2", "text": "Nimbus Telecom", "type": "Organization" },
+{ "id": "D3_E3", "text": "local shelter", "type": "Organization" }
+],
+"gold_relations": [
+{ "subj_id": "D3_E1", "pred": "worksAt", "obj_id": "D3_E2" },
+{ "subj_id": "D3_E1", "pred": "volunteersAt", "obj_id": "D3_E3" }
+],
+"personality_labels": {
+"D3_E1": {
+"big5": {
+"openness": 0.60,
+"conscientiousness": 0.82,
+"extraversion": 0.50,
+"agreeableness": 0.93,
+"neuroticism": 0.18
+},
+"explanation": "Very high agreeableness and high conscientiousness because she 'patiently resolves complaints' and volunteers; moderate extraversion fits steady interpersonal focus; low neuroticism given calm, helpful behavior."
+}
+}
+},
+{
+"doc_id": "D4",
+"text": "David, CEO of Solstice Energy, frequently meets investors and negotiates tough deals. He rarely shows emotion in public remarks and focuses on measurable targets.",
+"gold_entities": [
+{ "id": "D4_E1", "text": "David", "type": "Person" },
+{ "id": "D4_E2", "text": "Solstice Energy", "type": "Organization" }
+],
+"gold_relations": [
+{ "subj_id": "D4_E1", "pred": "leads", "obj_id": "D4_E2" },
+{ "subj_id": "D4_E1", "pred": "role", "obj_id": "D4_E2" }
+],
+"personality_labels": {
+"D4_E1": {
+"big5": {
+"openness": 0.60,
+"conscientiousness": 0.85,
+"extraversion": 0.40,
+"agreeableness": 0.30,
+"neuroticism": 0.22
+},
+"explanation": "High conscientiousness and low agreeableness inferred from negotiation focus and emphasis on measurable targets; lower extraversion and low neuroticism since he 'rarely shows emotion' and appears composed."
+}
+}
+},
+{
+"doc_id": "D5",
+"text": "Eva left Meridian Bank last month to join a fintech startup called FlowPay. Colleagues say she is meticulous and often rechecks numbers before submission.",
+"gold_entities": [
+{ "id": "D5_E1", "text": "Eva", "type": "Person" },
+{ "id": "D5_E2", "text": "Meridian Bank", "type": "Organization" },
+{ "id": "D5_E3", "text": "FlowPay", "type": "Organization" }
+],
+"gold_relations": [
+{ "subj_id": "D5_E1", "pred": "left", "obj_id": "D5_E2" },
+{ "subj_id": "D5_E1", "pred": "joined", "obj_id": "D5_E3" }
+],
+"personality_labels": {
+"D5_E1": {
+"big5": {
+"openness": 0.72,
+"conscientiousness": 0.95,
+"extraversion": 0.42,
+"agreeableness": 0.62,
+"neuroticism": 0.35
+},
+"explanation": "Very high conscientiousness from 'meticulous' behavior and double-checking numbers; moderate openness (moving to a fintech startup); lower extraversion as no social dominance is described."
+}
+}
+},
+{
+"doc_id": "D6",
+"text": "Franklin from Atlas Robotics mentors interns and encourages creative side projects. The company recently announced a partnership with Vector Dynamics.",
+"gold_entities": [
+{ "id": "D6_E1", "text": "Franklin", "type": "Person" },
+{ "id": "D6_E2", "text": "Atlas Robotics", "type": "Organization" },
+{ "id": "D6_E3", "text": "Vector Dynamics", "type": "Organization" }
+],
+"gold_relations": [
+{ "subj_id": "D6_E1", "pred": "worksAt", "obj_id": "D6_E2" },
+{ "subj_id": "D6_E1", "pred": "mentorsAt", "obj_id": "D6_E2" },
+{ "subj_id": "D6_E2", "pred": "partneredWith", "obj_id": "D6_E3" }
+],
+"personality_labels": {
+"D6_E1": {
+"big5": {
+"openness": 0.82,
+"conscientiousness": 0.63,
+"extraversion": 0.60,
+"agreeableness": 0.75,
+"neuroticism": 0.20
+},
+"explanation": "High openness and agreeableness from encouraging creative projects and mentoring; moderate conscientiousness and extraversion consistent with active mentorship; low neuroticism implied by supportive behavior."
+}
+}
+},
+{
+"doc_id": "D7",
+"text": "Grace was promoted to Head of Design at Loom Studios. She is known for taking bold creative risks and leading long brainstorming sessions.",
+"gold_entities": [
+{ "id": "D7_E1", "text": "Grace", "type": "Person" },
+{ "id": "D7_E2", "text": "Loom Studios", "type": "Organization" }
+],
+"gold_relations": [
+{ "subj_id": "D7_E1", "pred": "promotedTo", "obj_id": "D7_E2" },
+{ "subj_id": "D7_E1", "pred": "role", "obj_id": "D7_E2" }
+],
+"personality_labels": {
+"D7_E1": {
+"big5": {
+"openness": 0.93,
+"conscientiousness": 0.60,
+"extraversion": 0.81,
+"agreeableness": 0.66,
+"neuroticism": 0.24
+},
+"explanation": "Very high openness and high extraversion due to 'bold creative risks' and leading brainstorming; moderate conscientiousness and agreeableness consistent with leadership in creative contexts."
+}
+}
+},
+{
+"doc_id": "D8",
+"text": "Hector advised the startup NovaHealth on regulatory compliance last quarter. He often warns teams about potential pitfalls and writes detailed checklists.",
+"gold_entities": [
+{ "id": "D8_E1", "text": "Hector", "type": "Person" },
+{ "id": "D8_E2", "text": "NovaHealth", "type": "Organization" }
+],
+"gold_relations": [
+{ "subj_id": "D8_E1", "pred": "consultedFor", "obj_id": "D8_E2" }
+],
+"personality_labels": {
+"D8_E1": {
+"big5": {
+"openness": 0.60,
+"conscientiousness": 0.90,
+"extraversion": 0.30,
+"agreeableness": 0.50,
+"neuroticism": 0.48
+},
+"explanation": "High conscientiousness and moderate neuroticism because he 'writes detailed checklists' and warns about pitfalls (cautious); low extraversion implied by advisory role and careful communication."
+}
+}
+},
+{
+"doc_id": "D9",
+"text": "Iris organized a charity drive through HarborBank and recruited volunteers from the community. She greets everyone warmly and resolves conflicts with empathy.",
+"gold_entities": [
+{ "id": "D9_E1", "text": "Iris", "type": "Person" },
+{ "id": "D9_E2", "text": "HarborBank", "type": "Organization" },
+{ "id": "D9_E3", "text": "community", "type": "Organization" }
+],
+"gold_relations": [
+{ "subj_id": "D9_E1", "pred": "organizedWith", "obj_id": "D9_E2" },
+{ "subj_id": "D9_E1", "pred": "recruitedFrom", "obj_id": "D9_E3" }
+],
+"personality_labels": {
+"D9_E1": {
+"big5": {
+"openness": 0.65,
+"conscientiousness": 0.80,
+"extraversion": 0.85,
+"agreeableness": 0.95,
+"neuroticism": 0.20
+},
+"explanation": "Very high agreeableness and high extraversion shown by warm greetings and recruiting volunteers; high conscientiousness reflected in organizing an event; low neuroticism implied by effective conflict resolution."
+}
+}
+},
+{
+"doc_id": "D10",
+"text": "Jack, a freelance consultant, signed a contract with BluePeak Solutions to overhaul their data pipeline. He prefers working independently and often declines large team meetings.",
+"gold_entities": [
+{ "id": "D10_E1", "text": "Jack", "type": "Person" },
+{ "id": "D10_E2", "text": "BluePeak Solutions", "type": "Organization" }
+],
+"gold_relations": [
+{ "subj_id": "D10_E1", "pred": "contractedWith", "obj_id": "D10_E2" },
+{ "subj_id": "D10_E1", "pred": "occupation", "obj_id": "D10_E2" }
+],
+"personality_labels": {
+"D10_E1": {
+"big5": {
+"openness": 0.70,
+"conscientiousness": 0.85,
+"extraversion": 0.20,
+"agreeableness": 0.50,
+"neuroticism": 0.35
+},
+"explanation": "Low extraversion because he 'prefers working independently' and declines large meetings; high conscientiousness fits the consultant role and project focus; moderate openness indicated by system overhaul work."
+}
+}
+}
+]

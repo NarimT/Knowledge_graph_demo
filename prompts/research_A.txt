@@ -1,0 +1,43 @@
+What a knowledge graph is — short, research-advisor style
+
+A structured representation of facts where entities (nodes) are connected by typed relations (edges) and often enriched with attributes and provenance.
+
+Encodes both data (facts) and schema/ontology (types, constraints, hierarchies) so machines can reason and query the information.
+
+Designed for interoperability: uses identifiers (URIs), canonical labels, and links to external resources for disambiguation.
+
+Supports queries (e.g., SPARQL), graph algorithms (traversal, centrality), and inference (type propagation, rule-based reasoning).
+
+Emphasizes provenance and confidence — each triple ideally carries where it came from and how certain it is.
+
+Scales from small document-level graphs to web-scale knowledge bases; the same primitives (entities, relations, attributes) apply at every scale.
+
+Four practical approaches to build a KG from a single text document
+
+Rule-based extraction using dependency parsing & patterns
+Short description: parse sentences with an NLP parser, then apply handcrafted syntactic/semantic patterns (e.g., subject-verb-object templates, regexes) to emit (subject, relation, object) triples and attributes.
+
+Pro: Fast to implement for a narrow domain and gives predictable, explainable outputs.
+
+Con: Fragile — rules don’t generalize well to diverse phrasing and require lots of manual tuning.
+
+Open Information Extraction (OpenIE)
+Short description: use an unsupervised or weakly supervised OpenIE system to automatically extract candidate relational triples directly from sentences (no schema needed). Optionally post-process to canonicalize entities and relations.
+
+Pro: Works out-of-the-box on varied text and produces many candidate triples without labeled training data.
+
+Con: Extracted relations are often noisy, semantically underspecified, and need normalization and linking to be useful in a KG.
+
+Supervised relation extraction (fine-tuned transformer / sequence labeling)
+Short description: fine-tune a relation extraction model (e.g., BERT-based) or a span-classification model on labeled examples to detect entities and relations; apply it to the document to populate triples according to a target ontology.
+
+Pro: High accuracy and precise relation typing when you have domain labels; integrates cleanly with an ontology.
+
+Con: Requires labeled training data (or good transfer models); expensive to prepare and may overfit a small document if not carefully applied.
+
+LLM / prompt-based triple extraction + entity linking
+Short description: prompt a large language model to list entities and produce structured triples (or JSON-LD/RDF snippets) from the document, then apply deterministic entity linking (to canonical IDs or external KBs) and validate consistency.
+
+Pro: Very flexible — handles varied language, implicit facts, and inference; quick to prototype without custom training.
+
+Con: LLMs can hallucinate facts or produce inconsistent formats; you must add strong validation, provenance, and confidence checks.

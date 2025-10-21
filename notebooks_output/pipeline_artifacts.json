@@ -1,0 +1,565 @@
+{
+  "kg_jsonld": "notebooks_output/kg_output_demo.json",
+  "kg_png": "notebooks_output/kg_demo.png",
+  "pred_relations": {
+    "D1": [
+      {
+        "subj_id": "D1_E1",
+        "pred": "join",
+        "obj_id": "D1_GEN_corp"
+      },
+      {
+        "subj_id": "D1_GEN_she",
+        "pred": "organize",
+        "obj_id": "D1_GEN_meetings"
+      },
+      {
+        "subj_id": "D1_GEN_she",
+        "pred": "meet",
+        "obj_id": "D1_GEN_deadlines"
+      },
+      {
+        "subj_id": "D1_GEN_she",
+        "pred": "keep",
+        "obj_id": "D1_GEN_team"
+      },
+      {
+        "subj_id": "D1_E1",
+        "pred": "worksAt",
+        "obj_id": "D1_GEN_corp"
+      },
+      {
+        "subj_id": "D1_GEN_she",
+        "pred": "worksAt",
+        "obj_id": "D1_E2"
+      }
+    ],
+    "D2": [
+      {
+        "subj_id": "D2_GEN_rivera",
+        "pred": "found",
+        "obj_id": "D2_GEN_labs"
+      },
+      {
+        "subj_id": "D2_GEN_rivera",
+        "pred": "leave",
+        "obj_id": "D2_GEN_research"
+      },
+      {
+        "subj_id": "D2_GEN_he",
+        "pred": "speak",
+        "obj_id": "D2_GEN_conferences"
+      },
+      {
+        "subj_id": "D2_GEN_he",
+        "pred": "push",
+        "obj_id": "D2_GEN_colleagues"
+      },
+      {
+        "subj_id": "D2_GEN_he",
+        "pred": "try",
+        "obj_id": "D2_GEN_experiments"
+      },
+      {
+        "subj_id": "D2_GEN_dr",
+        "pred": "worksAt",
+        "obj_id": "D2_GEN_labs"
+      },
+      {
+        "subj_id": "D2_GEN_he",
+        "pred": "worksAt",
+        "obj_id": "D2_GEN_acme_corp"
+      }
+    ],
+    "D3": [
+      {
+        "subj_id": "D3_GEN_she",
+        "pred": "resolve",
+        "obj_id": "D3_GEN_complaints"
+      },
+      {
+        "subj_id": "D3_E1",
+        "pred": "worksAt",
+        "obj_id": "D3_GEN_telecom"
+      },
+      {
+        "subj_id": "D3_GEN_she",
+        "pred": "worksAt",
+        "obj_id": "D3_GEN_acme_corp"
+      }
+    ],
+    "D4": [
+      {
+        "subj_id": "D4_E1",
+        "pred": "meet",
+        "obj_id": "D4_GEN_investors"
+      },
+      {
+        "subj_id": "D4_E1",
+        "pred": "negotiate",
+        "obj_id": "D4_GEN_deals"
+      },
+      {
+        "subj_id": "D4_GEN_he",
+        "pred": "show",
+        "obj_id": "D4_GEN_emotion"
+      },
+      {
+        "subj_id": "D4_GEN_he",
+        "pred": "focus",
+        "obj_id": "D4_GEN_targets"
+      },
+      {
+        "subj_id": "D4_E1",
+        "pred": "worksAt",
+        "obj_id": "D4_GEN_acme_corp"
+      },
+      {
+        "subj_id": "D4_GEN_he",
+        "pred": "worksAt",
+        "obj_id": "D4_GEN_acme_corp"
+      }
+    ],
+    "D5": [
+      {
+        "subj_id": "D5_E1",
+        "pred": "leave",
+        "obj_id": "D5_GEN_bank"
+      },
+      {
+        "subj_id": "D5_E1",
+        "pred": "join",
+        "obj_id": "D5_GEN_startup"
+      },
+      {
+        "subj_id": "D5_GEN_she",
+        "pred": "recheck",
+        "obj_id": "D5_GEN_numbers"
+      },
+      {
+        "subj_id": "D5_E1",
+        "pred": "worksAt",
+        "obj_id": "D5_GEN_bank"
+      },
+      {
+        "subj_id": "D5_GEN_colleagues",
+        "pred": "worksAt",
+        "obj_id": "D5_GEN_acme_corp"
+      }
+    ],
+    "D6": [
+      {
+        "subj_id": "D6_GEN_company",
+        "pred": "announce",
+        "obj_id": "D6_GEN_partnership"
+      },
+      {
+        "subj_id": "D6_E1",
+        "pred": "worksAt",
+        "obj_id": "D6_GEN_acme_corp"
+      },
+      {
+        "subj_id": "D6_GEN_the",
+        "pred": "worksAt",
+        "obj_id": "D6_GEN_acme_corp"
+      }
+    ],
+    "D7": [
+      {
+        "subj_id": "D7_E1",
+        "pred": "promote",
+        "obj_id": "D7_GEN_head"
+      },
+      {
+        "subj_id": "D7_GEN_she",
+        "pred": "take",
+        "obj_id": "D7_GEN_risks"
+      },
+      {
+        "subj_id": "D7_E1",
+        "pred": "worksAt",
+        "obj_id": "D7_GEN_studios"
+      },
+      {
+        "subj_id": "D7_GEN_she",
+        "pred": "worksAt",
+        "obj_id": "D7_GEN_acme_corp"
+      }
+    ],
+    "D8": [
+      {
+        "subj_id": "D8_E1",
+        "pred": "advise",
+        "obj_id": "D8_GEN_startup"
+      },
+      {
+        "subj_id": "D8_GEN_he",
+        "pred": "warn",
+        "obj_id": "D8_GEN_teams"
+      },
+      {
+        "subj_id": "D8_GEN_he",
+        "pred": "write",
+        "obj_id": "D8_GEN_checklists"
+      },
+      {
+        "subj_id": "D8_E1",
+        "pred": "worksAt",
+        "obj_id": "D8_GEN_acme_corp"
+      },
+      {
+        "subj_id": "D8_GEN_he",
+        "pred": "worksAt",
+        "obj_id": "D8_GEN_acme_corp"
+      }
+    ],
+    "D9": [
+      {
+        "subj_id": "D9_E1",
+        "pred": "organize",
+        "obj_id": "D9_GEN_drive"
+      },
+      {
+        "subj_id": "D9_E1",
+        "pred": "recruit",
+        "obj_id": "D9_GEN_volunteers"
+      },
+      {
+        "subj_id": "D9_GEN_she",
+        "pred": "greet",
+        "obj_id": "D9_GEN_everyone"
+      },
+      {
+        "subj_id": "D9_GEN_she",
+        "pred": "resolve",
+        "obj_id": "D9_GEN_conflicts"
+      },
+      {
+        "subj_id": "D9_E1",
+        "pred": "worksAt",
+        "obj_id": "D9_E2"
+      },
+      {
+        "subj_id": "D9_GEN_she",
+        "pred": "worksAt",
+        "obj_id": "D9_GEN_acme_corp"
+      }
+    ],
+    "D10": [
+      {
+        "subj_id": "D10_E1",
+        "pred": "sign",
+        "obj_id": "D10_GEN_contract"
+      },
+      {
+        "subj_id": "D10_E1",
+        "pred": "overhaul",
+        "obj_id": "D10_GEN_pipeline"
+      },
+      {
+        "subj_id": "D10_GEN_he",
+        "pred": "work",
+        "obj_id": "D10_GEN_meetings"
+      },
+      {
+        "subj_id": "D10_GEN_he",
+        "pred": "decline",
+        "obj_id": "D10_GEN_meetings"
+      },
+      {
+        "subj_id": "D10_E1",
+        "pred": "worksAt",
+        "obj_id": "D10_GEN_solutions"
+      },
+      {
+        "subj_id": "D10_GEN_he",
+        "pred": "worksAt",
+        "obj_id": "D10_GEN_acme_corp"
+      }
+    ]
+  },
+  "rule_personality": {
+    "D1": {
+      "D1_E1": {
+        "big5": {
+          "openness": 0.5,
+          "conscientiousness": 0.9,
+          "extraversion": 0.5,
+          "agreeableness": 0.5,
+          "neuroticism": 0.5
+        },
+        "explanation": "rule-based heuristics: keywords found in document text."
+      }
+    },
+    "D2": {
+      "D2_E1": {
+        "big5": {
+          "openness": 0.8,
+          "conscientiousness": 0.5,
+          "extraversion": 0.8,
+          "agreeableness": 0.5,
+          "neuroticism": 0.5
+        },
+        "explanation": "rule-based heuristics: keywords found in document text."
+      }
+    },
+    "D3": {
+      "D3_E1": {
+        "big5": {
+          "openness": 0.5,
+          "conscientiousness": 0.5,
+          "extraversion": 0.8,
+          "agreeableness": 0.9,
+          "neuroticism": 0.5
+        },
+        "explanation": "rule-based heuristics: keywords found in document text."
+      }
+    },
+    "D4": {
+      "D4_E1": {
+        "big5": {
+          "openness": 0.5,
+          "conscientiousness": 0.5,
+          "extraversion": 0.8,
+          "agreeableness": 0.5,
+          "neuroticism": 0.7
+        },
+        "explanation": "rule-based heuristics: keywords found in document text."
+      }
+    },
+    "D5": {
+      "D5_E1": {
+        "big5": {
+          "openness": 0.5,
+          "conscientiousness": 0.9,
+          "extraversion": 0.5,
+          "agreeableness": 0.5,
+          "neuroticism": 0.5
+        },
+        "explanation": "rule-based heuristics: keywords found in document text."
+      }
+    },
+    "D6": {
+      "D6_E1": {
+        "big5": {
+          "openness": 0.8,
+          "conscientiousness": 0.5,
+          "extraversion": 0.5,
+          "agreeableness": 0.5,
+          "neuroticism": 0.5
+        },
+        "explanation": "rule-based heuristics: keywords found in document text."
+      }
+    },
+    "D7": {
+      "D7_E1": {
+        "big5": {
+          "openness": 0.8,
+          "conscientiousness": 0.5,
+          "extraversion": 0.8,
+          "agreeableness": 0.5,
+          "neuroticism": 0.5
+        },
+        "explanation": "rule-based heuristics: keywords found in document text."
+      }
+    },
+    "D8": {
+      "D8_E1": {
+        "big5": {
+          "openness": 0.5,
+          "conscientiousness": 0.5,
+          "extraversion": 0.5,
+          "agreeableness": 0.5,
+          "neuroticism": 0.7
+        },
+        "explanation": "rule-based heuristics: keywords found in document text."
+      }
+    },
+    "D9": {
+      "D9_E1": {
+        "big5": {
+          "openness": 0.5,
+          "conscientiousness": 0.9,
+          "extraversion": 0.8,
+          "agreeableness": 0.9,
+          "neuroticism": 0.5
+        },
+        "explanation": "rule-based heuristics: keywords found in document text."
+      }
+    },
+    "D10": {
+      "D10_E1": {
+        "big5": {
+          "openness": 0.5,
+          "conscientiousness": 0.5,
+          "extraversion": 0.5,
+          "agreeableness": 0.5,
+          "neuroticism": 0.5
+        },
+        "explanation": "rule-based heuristics: keywords found in document text."
+      }
+    }
+  },
+  "llm_personality_raw": {
+    "D1": {
+      "D1_E1": {
+        "extracted": [
+          {
+            "subj": "Alice",
+            "pred": "worksAt",
+            "obj": "Corp",
+            "evidence": [
+              "Alice joined Acme Corp as a project manager last month. She organized weekly meetings and consistently met deadlines to "
+            ]
+          }
+        ],
+        "generated_at": "2025-10-20T05:01:58.057902Z",
+        "simulated": true
+      }
+    },
+    "D2": {
+      "D2_E1": {
+        "extracted": [
+          {
+            "subj": "Dr",
+            "pred": "worksAt",
+            "obj": "Labs",
+            "evidence": [
+              "Dr. Ben Rivera founded Helix Labs after leaving university research. He often speaks at conferences and pushes colleague"
+            ]
+          }
+        ],
+        "generated_at": "2025-10-20T05:01:58.060047Z",
+        "simulated": true
+      }
+    },
+    "D3": {
+      "D3_E1": {
+        "extracted": [
+          {
+            "subj": "Carla",
+            "pred": "worksAt",
+            "obj": "Telecom",
+            "evidence": [
+              "Carla is a customer support lead at Nimbus Telecom. She patiently resolves complaints and volunteers on weekends at the "
+            ]
+          }
+        ],
+        "generated_at": "2025-10-20T05:01:58.062158Z",
+        "simulated": true
+      }
+    },
+    "D4": {
+      "D4_E1": {
+        "extracted": [
+          {
+            "subj": "David",
+            "pred": "worksAt",
+            "obj": "Acme Corp",
+            "evidence": [
+              "David, CEO of Solstice Energy, frequently meets investors and negotiates tough deals. He rarely shows emotion in public "
+            ]
+          }
+        ],
+        "generated_at": "2025-10-20T05:01:58.063608Z",
+        "simulated": true
+      }
+    },
+    "D5": {
+      "D5_E1": {
+        "extracted": [
+          {
+            "subj": "Eva",
+            "pred": "worksAt",
+            "obj": "Bank",
+            "evidence": [
+              "Eva left Meridian Bank last month to join a fintech startup called FlowPay. Colleagues say she is meticulous and often r"
+            ]
+          }
+        ],
+        "generated_at": "2025-10-20T05:01:58.064366Z",
+        "simulated": true
+      }
+    },
+    "D6": {
+      "D6_E1": {
+        "extracted": [
+          {
+            "subj": "Franklin",
+            "pred": "worksAt",
+            "obj": "Acme Corp",
+            "evidence": [
+              "Franklin from Atlas Robotics mentors interns and encourages creative side projects. The company recently announced a par"
+            ]
+          }
+        ],
+        "generated_at": "2025-10-20T05:01:58.065129Z",
+        "simulated": true
+      }
+    },
+    "D7": {
+      "D7_E1": {
+        "extracted": [
+          {
+            "subj": "Grace",
+            "pred": "worksAt",
+            "obj": "Studios",
+            "evidence": [
+              "Grace was promoted to Head of Design at Loom Studios. She is known for taking bold creative risks and leading long brain"
+            ]
+          }
+        ],
+        "generated_at": "2025-10-20T05:01:58.065848Z",
+        "simulated": true
+      }
+    },
+    "D8": {
+      "D8_E1": {
+        "extracted": [
+          {
+            "subj": "Hector",
+            "pred": "worksAt",
+            "obj": "Acme Corp",
+            "evidence": [
+              "Hector advised the startup NovaHealth on regulatory compliance last quarter. He often warns teams about potential pitfal"
+            ]
+          }
+        ],
+        "generated_at": "2025-10-20T05:01:58.066579Z",
+        "simulated": true
+      }
+    },
+    "D9": {
+      "D9_E1": {
+        "extracted": [
+          {
+            "subj": "Iris",
+            "pred": "worksAt",
+            "obj": "HarborBank",
+            "evidence": [
+              "Iris organized a charity drive through HarborBank and recruited volunteers from the community. She greets everyone warml"
+            ]
+          }
+        ],
+        "generated_at": "2025-10-20T05:01:58.067374Z",
+        "simulated": true
+      }
+    },
+    "D10": {
+      "D10_E1": {
+        "extracted": [
+          {
+            "subj": "Jack",
+            "pred": "worksAt",
+            "obj": "Solutions",
+            "evidence": [
+              "Jack, a freelance consultant, signed a contract with BluePeak Solutions to overhaul their data pipeline. He prefers work"
+            ]
+          }
+        ],
+        "generated_at": "2025-10-20T05:01:58.068161Z",
+        "simulated": true
+      }
+    }
+  }
+}

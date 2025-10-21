@@ -1,0 +1,49 @@
+You are an information extraction assistant. Analyze the following input and extract only relations that are explicitly stated in the text.
+
+Input:
+{input_text}
+
+INSTRUCTIONS:
+- Extract relations that connect a PERSON to an ORGANIZATION or a PERSON to an OCCUPATION mentioned in the text.
+- Only extract relations that are directly supported or clearly expressed in the text. Do NOT infer unstated relations.
+- Use these canonical predicate labels where applicable:
+  worksAt, founded, joined, leftCompany, promotedTo, contractedWith, volunteersAt,
+  mentorsAt, partneredWith, organizedWith, recruitedFrom, consultedFor, hasRole, leads, role
+- Use the exact surface form from the input text for "subj" and "obj".
+- For each extracted triple include an "evidence" list containing one or more exact substrings taken verbatim from the input text that support the extraction.
+- Return JSON **only**. No commentary, no extra text.
+
+OUTPUT FORMAT (JSON):
+{
+  "extracted": [
+    {
+      "subj": "<PERSON surface text>",
+      "pred": "<canonical predicate>",
+      "obj": "<ORGANIZATION or OCCUPATION surface text>",
+      "evidence": ["<exact substring 1 from the input_text>", "<exact substring 2 (optional)>"]
+    },
+    ...
+  ]
+}
+
+EXAMPLE:
+If the input_text is "Alice joined Acme Corp as a project manager last month."
+Return:
+{
+  "extracted": [
+    {
+      "subj": "Alice",
+      "pred": "worksAt",
+      "obj": "Acme Corp",
+      "evidence": ["Alice joined Acme Corp as a project manager last month"]
+    },
+    {
+      "subj": "Alice",
+      "pred": "hasRole",
+      "obj": "project manager",
+      "evidence": ["as a project manager"]
+    }
+  ]
+}
+
+Now produce the JSON for the actual {input_text}.

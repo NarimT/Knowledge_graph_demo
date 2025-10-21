@@ -1,0 +1,77 @@
+Short intro: label only what is explicitly present or clearly implied in the sentence set. Use the dataset ID and entity ID format DOCID_E# for all annotations. For personality use numeric scores in [0.00,1.00] (two decimals) and add a one-sentence justification citing evidence (span or phrase).
+
+1) Entities (≤10 checklist items)
+
+Select spans that name real-world referents (people, organizations, occupations). Use the shortest meaningful span (e.g., Alice, Acme Corp, Head of Design).
+
+Allowed types: Person, Organization, Occupation (or Other if none fit). Tag exactly one type per entity.
+
+Assign an ID: DOCID_E# (increment within document in left-to-right order).
+
+Do not create separate entity records for pronouns — instead link pronouns to the referenced Person via coreference (see relations step).
+
+If a name + title appears (e.g., “Dr. Ben Rivera”), span the full name but normalize text to the common name (Ben Rivera) in metadata if needed.
+
+Treat institutions and collective nouns as Organization (e.g., community, local shelter, Nimbus Telecom).
+
+Merge aliases within the same document (e.g., Acme and Acme Corp) — record one entity and list aliases in comments.
+
+If ambiguous (is it a shop name vs. a person?), mark entity as Ambiguous with a short note rather than guessing.
+
+Don’t invent entities not supported by text (no inference across documents).
+
+For each entity include id, text, and type; optional span_offsets are encouraged.
+
+2) Relations (≤10 checklist items)
+
+Only annotate relations that connect two annotated entities within the same document. Use subj_id, pred, obj_id.
+
+Use the provided predicate set when applicable (worksAt, founded, joined, left, volunteersAt, mentorsAt, partneredWith, promotedTo, contractedWith, organizedWith, consultedFor, recruitedFrom, etc.). If none fit, add a concise verb phrase (snake_case).
+
+Relation direction matters: subj -> pred -> obj must reflect the text (e.g., Alice worksAt Acme).
+
+Only assert relations that are explicitly stated or very directly implied in the text (e.g., “Alice joined Acme” → joined). Avoid speculative relations (e.g., “Alice met Bob once” does not imply worksWith).
+
+Multiple relations between same entities are allowed if the text supports them (e.g., founded and affiliatedWith).
+
+When a relation is supported by a specific clause, include a short evidence note or span (recommended).
+
+For coreference, resolve relations to the canonical entity (e.g., “She organized…” → use the Person entity id).
+
+If tense/time matters (past vs present) preserve it in an optional tense field; otherwise omit.
+
+If relation is ambiguous, add confidence: low and a short justification.
+
+Validate that both subj_id and obj_id reference existing gold_entities.
+
+3) Personality scores (Big-5) (≤10 checklist items)
+
+For each Person entity in the doc, provide big5 scores openness, conscientiousness, extraversion, agreeableness, neuroticism as floats in [0.00,1.00] with two decimals. If evidence is absent, use null (do not guess).
+
+Provide a one-sentence justification per person linking score assignments to explicit text (cite span or phrase) — e.g., “High conscientiousness (0.95) — ‘meticulous’ and ‘rechecks numbers’.”
+
+Use these conservative mapping heuristics (guidance, not strict rules):
+
+Conscientiousness: organizing, meeting deadlines, meticulous/rechecks numbers → ↑ score.
+
+Extraversion: speaks at conferences, recruits volunteers, greets warmly, leads sessions → ↑ score.
+
+Agreeableness: volunteers, resolves conflicts empathetically, patient/resolves complaints → ↑ score.
+
+Openness: takes creative risks, encourages creative projects, founder of new lab → ↑ score.
+
+Neuroticism: expresses worry, frequent cautioning about pitfalls, emotional instability → ↑ score (higher = more prone).
+
+Prefer coarse but justified differences: round to .05–.10 steps (e.g., 0.60, 0.70, 0.95) rather than tiny granular values.
+
+When text contains direct psychometric language (e.g., “highly anxious”), reflect it in neuroticism accordingly.
+
+If multiple contradictory cues exist, annotate both with notes and set confidence (0.0–1.0). Example field: "confidence": 0.7.
+
+If a trait is only weakly implied, assign a mid value (e.g., 0.50) or null and note low confidence.
+
+Keep explanations factual and cite exact phrases; avoid bringing external stereotypes (“engineers are X”) into the justification.
+
+Store personality labels under the person’s entity id: personality_labels: { PERSON_ID: { big5: {...}, explanation: "..." } }.
+
+For QA, every annotated person must have a short justification; missing justifications make the label invalid.
